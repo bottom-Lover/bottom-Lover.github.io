@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+### [搭建web服务器](https://13633825898.github.io/article/createweb)
+经过两天不断地努力终于让我搭建好了自己的第一台服务器！
 
-You can use the [editor on GitHub](https://github.com/13633825898/13633825898.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+在这个过程中遇到好多难题，下面我就分享一下这次搭建服务器的经历。
+#### 第一天
+#### 第二天
+.....
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### [仙剑四攻略](https://13633825898.github.io/article/first-one)
+还记得第一次玩电脑，那是在我三姨家。。。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+当时电脑里只有两个游戏，一个叫孤单枪手，一个叫仙剑奇侠传四。
 
-```markdown
-Syntax highlighted code block
+我是一个仙剑迷，看见仙剑系列就走不动，从我第一次接触电脑就开始了我的仙剑之旅。
 
-# Header 1
-## Header 2
-### Header 3
+### [教你如何找资源](https://13633825898.github.io/pages/find-skill)
+资源这个东西，说真的不值钱，可是如果不会找，那可真是让人头疼。
 
-- Bulleted
-- List
+我大学专业是计算机科学与技术，上学的时候学习没搞好，但是找资源我学得贼溜。
 
-1. Numbered
-2. List
+什么快播啦（已被封），百度云啊，微信公众号呀，百度贴吧等等，都是资源聚集地。
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/13633825898/13633825898.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.

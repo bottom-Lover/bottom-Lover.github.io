@@ -116,3 +116,59 @@ uwsgi --ini /home/lin01/mrlinfile/projects/django_web/wsgi.ini
 systemctl restart nginx
 ```
 至此整个项目部署完成，通过客户机就可以访问服务器了。
+
+***
+
+#### 遇到的问题
+在完成部署之后，打开浏览器访问，发现没有样式，网页长这个熊样：
+![avatar](E:\cppProjects\CLionProjects\day200215\nocss.jpg)
+
+至于没有显示出样式，肯定是静态文件出问题了，要么就是根本就没创建静态文件目录，要么就是路径不对。
+
+我呢，是两者都有问题。
+
+现在来解决第一个问题。
+
+第一步，在项目根目录下创建名为static的文件夹；
+
+第二步，在settings里面设置
+```
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+```
+在项目的（不是APP的）urls.py里面设置
+```
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    # ... the rest of your URLconf goes here ...
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+```
+第三步，使用Python命令收集静态文件
+```
+python manage.py collectstatic
+```
+至此，第一个问题完美解决
+
+现在解决第二个问题。
+
+首先检查nginx目录下的conf.d/nginx.conf文件的配置，在下处查看静态文件夹位置是否跟你的实际位置一致。
+```
+# ...
+location /static {
+        alias /home/lin01/mrlinfile/projects/django_web/static; # your Django project's static files - amend as required
+    }
+# ...
+```
+如果不一致记得更改，如果一致，重启nginx服务即可。
+不一致的改完此文件之后，还要再去另外一个地方检查，即nginx根目录下的nginx.conf，同样要在下处查看路径。
+```
+# ...
+location /static {
+        alias /home/lin01/mrlinfile/projects/django_web/static; # your Django project's static files - amend as required
+    }
+# ...
+```
+不一致的记得更改，一致的可以忽略。
+
+（PS：这两个文件什么关系？）

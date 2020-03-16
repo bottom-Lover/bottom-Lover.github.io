@@ -121,7 +121,7 @@ systemctl restart nginx
 
 #### 遇到的问题
 在完成部署之后，打开浏览器访问，发现没有样式，网页长这个熊样：
-![avatar](E:\cppProjects\CLionProjects\day200215\nocss.jpg)
+![](https://github.com/13633825898/13633825898.github.io/tree/master/images/nocss.jpg)
 
 至于没有显示出样式，肯定是静态文件出问题了，要么就是根本就没创建静态文件目录，要么就是路径不对。
 

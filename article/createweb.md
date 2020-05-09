@@ -15,6 +15,7 @@ nginx停止命令：systemctl stop nginx
 ##### 1.3 测试nginx
 当nginx启动之后，用客户机在浏览器中访问192.168.221.130（这是我的服务器ip地址，你访问的时候应该换成你的服务器ip），即可看到默认的nginx静态网页。    
 如果浏览器中能看到nginx默认网页，则说明nginx安装成功。
+
 #### uwsgi服务器
 ##### 2.1 下载
 在Ubuntu终端中下载uwsgi，使用命令：
@@ -59,7 +60,7 @@ python3 manage.py runserver 8080
 能打开网页说明此项目运行正常。  
 使用uwsgi启动项目：
 ```
-uwsgi --http :8080 --module django_web.uwgi
+uwsgi --http :8080 --module django_web.wsgi
 ```
 此命令与上一个命令效果一样。  
 至此如果能正常访问项目则说明一切准备工作都已完成。接下来就是配置 nginx + uwsgi 托管项目。
@@ -121,7 +122,6 @@ systemctl restart nginx
 
 #### 遇到的问题
 在完成部署之后，打开浏览器访问，发现没有样式，网页长这个熊样：
-
 ![avatar](https://github.com/13633825898/13633825898.github.io/tree/master/images/nocss.jpg)
 
 至于没有显示出样式，肯定是静态文件出问题了，要么就是根本就没创建静态文件目录，要么就是路径不对。
@@ -173,3 +173,31 @@ location /static {
 不一致的记得更改，一致的可以忽略。
 
 （PS：这两个文件什么关系？）
+
+
+
+------
+
+### django+nginx+uwsgi部署后修改代码不能及时更新
+
+项目部署后，需要考虑uwsgi服务器，每次***\*修改代码都需要重启uwsgi\****。
+
+#### 方案：
+
+代码修改后，进入服务器项目目录，查看uwsgi进程：
+
+```
+ps -ef|grep uwsgi 
+```
+
+然后kill掉所有进程：
+
+```
+killall -9 uwsgi
+```
+
+再重启uwsgi
+
+```
+uwsgi --ini uwsgi.ini 
+```

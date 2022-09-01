@@ -1,4 +1,4 @@
-### [搭建web服务器](https://13633825898.github.io/article/createweb)
+### [搭建web服务器](https://bottom-Lover.github.io/article/createweb)
 经过两天不断地努力终于让我搭建好了自己的第一台服务器！
 
 在这个过程中遇到好多难题，下面我就分享一下这次搭建服务器的经历。
@@ -7,14 +7,14 @@
 .....
 
 
-### [仙剑四攻略](https://13633825898.github.io/article/first-one)
+### [仙剑四攻略](https://bottom-Lover.github.io/article/first-one)
 还记得第一次玩电脑，那是在我三姨家。。。
 
 当时电脑里只有两个游戏，一个叫孤单枪手，一个叫仙剑奇侠传四。
 
 我是一个仙剑迷，看见仙剑系列就走不动，从我第一次接触电脑就开始了我的仙剑之旅。
 
-### [教你如何找资源](https://13633825898.github.io/pages/find-skill)
+### [教你如何找资源](https://bottom-Lover.github.io/pages/find-skill)
 资源这个东西，说真的不值钱，可是如果不会找，那可真是让人头疼。
 
 我大学专业是计算机科学与技术，上学的时候学习没搞好，但是找资源我学得贼溜。
